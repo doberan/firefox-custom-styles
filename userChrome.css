@@ -1,5 +1,6 @@
 @charset "UTF-8";
-@-moz-document url(chrome://browser/content/browser.xhtml) {
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
   /*
   tabs to bottom
   source: https://gist.github.com/Arty2/e6e61801531ec5ee1f9f
@@ -32,8 +33,12 @@
     --tabs-border-color: none !important;
   }
 
-  #navigator-toolbox toolbar:not(#nav-bar):not(#toolbar-menubar) {-moz-box-ordinal-group:10}
-  #TabsToolbar {-moz-box-ordinal-group:1000!important}
+  #navigator-toolbox toolbar:not(#nav-bar):not(#toolbar-menubar) {
+    -moz-box-ordinal-group: 10;
+  }
+  #TabsToolbar {
+    -moz-box-ordinal-group: 1000 !important;
+  }
   /* 
   #TabsToolbar {
     position: absolute !important; 
@@ -52,13 +57,13 @@
   }
 
   :root {
-  --tab-toolbar-navbar-overlap: 0px !important;
-  --tab-min-height: 33px !important; 
-  --tab-min-height_tnot: 32px;
+    --tab-toolbar-navbar-overlap: 0px !important;
+    --tab-min-height: 33px !important;
+    --tab-min-height_tnot: 32px;
   }
   :root #tabbrowser-tabs {
-  --tab-min-height: 33px !important; 
-  --tab-min-width: 80px !important;
+    --tab-min-height: 33px !important;
+    --tab-min-width: 80px !important;
   }
 
   #TabsToolbar {
@@ -67,7 +72,9 @@
     box-shadow: ThreeDShadow 0 -1px inset, -moz-dialog 0 1px !important;
     background-color: var(--toolbar-bgcolor) !important;
   }
-  #TabsToolbar #window-controls {display:none!important;}
+  #TabsToolbar #window-controls {
+    display: none !important;
+  }
 
   /* #main-window[tabsintitlebar]:not([inFullscreen="true"]) #toolbar-menubar[autohide="true"] ~ #TabsToolbar .titlebar-buttonbox-container {
     position: fixed !important;
@@ -81,4 +88,9 @@
     padding-right: 100px !important;
   }
   */
+
+  #urlbar[breakout][breakout-extend] {
+    bottom: 0px !important;
+    top: auto !important;
+  }
 }
